@@ -1,1 +1,1 @@
-# minesweeper-next
+# Minesweeper
