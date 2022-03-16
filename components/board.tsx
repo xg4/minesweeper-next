@@ -33,7 +33,9 @@ export default function Board() {
     const cells = board.flat()
     const mines = cells.filter((cell) => cell.isMine)
     const isFailed = mines.some((cell) => cell.isRevealed)
-    const isSuccess = mines.every((cell) => cell.isFlagged)
+    const isSuccess =
+      mines.every((cell) => cell.isFlagged) &&
+      cells.filter((cell) => !cell.isMine).every((cell) => cell.isRevealed)
 
     if (isFailed) {
       alert('You lose!')
