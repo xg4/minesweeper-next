@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { expandEmptyCells, generateBoard, showAllMines } from '../util/shared'
+import { expandEmptyCells, generateBoard, showAllMines } from '../helpers'
 import Cell from './cell'
 
 function Time({ startTime, status }: { startTime: number; status: string }) {
